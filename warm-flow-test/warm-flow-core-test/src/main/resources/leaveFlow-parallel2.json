@@ -1,0 +1,148 @@
+{
+  "flowCode": "leaveFlow-parallel2",
+  "flowName": "并行-分开",
+  "formCustom": "N",
+  "formPath": "system/leave/approve",
+  "version": "1",
+  "nodeList": [
+    {
+      "coordinate": "140,220|140,220",
+      "nodeCode": "1",
+      "nodeName": "开始",
+      "nodeRatio": 0.000,
+      "nodeType": 0,
+      "skipList": [
+        {
+          "coordinate": "160,220;250,220",
+          "nextNodeCode": "2",
+          "nowNodeCode": "1",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "300,220|300,220",
+      "nodeCode": "2",
+      "nodeName": "待提交",
+      "nodeRatio": 0.000,
+      "nodeType": 1,
+      "permissionFlag": "role:1@@role:3",
+      "skipList": [
+        {
+          "coordinate": "350,220;450,220",
+          "nextNodeCode": "3",
+          "nowNodeCode": "2",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "500,220|500,220",
+      "nodeCode": "3",
+      "nodeName": "小组长审批",
+      "nodeRatio": 0.000,
+      "nodeType": 1,
+      "permissionFlag": "role:1@@role:3",
+      "skipList": [
+        {
+          "coordinate": "550,220;635,220",
+          "nextNodeCode": "4",
+          "nowNodeCode": "3",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "660,220",
+      "nodeCode": "4",
+      "nodeRatio": 0.000,
+      "nodeType": 4,
+      "skipList": [
+        {
+          "coordinate": "685,220;716,220;716,120;770,120",
+          "nextNodeCode": "5",
+          "nowNodeCode": "4",
+          "skipType": "PASS"
+        },
+        {
+          "coordinate": "685,220;715,220;715,280;770,280",
+          "nextNodeCode": "7",
+          "nowNodeCode": "4",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "820,120|820,120",
+      "nodeCode": "5",
+      "nodeName": "大组长审批",
+      "nodeRatio": 0.000,
+      "nodeType": 1,
+      "permissionFlag": "role:1@@role:3",
+      "skipList": [
+        {
+          "coordinate": "870,120;990,120",
+          "nextNodeCode": "6",
+          "nowNodeCode": "5",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "1040,120|1040,120",
+      "nodeCode": "6",
+      "nodeName": "部门经理审批",
+      "nodeRatio": 0.000,
+      "nodeType": 1,
+      "permissionFlag": "role:1@@role:3",
+      "skipList": [
+        {
+          "coordinate": "1090,120;1220,120",
+          "nextNodeCode": "8",
+          "nowNodeCode": "6",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "820,280|820,280",
+      "nodeCode": "7",
+      "nodeName": "董事长审批",
+      "nodeRatio": 0.000,
+      "nodeType": 1,
+      "permissionFlag": "role:1@@role:3",
+      "skipList": [
+        {
+          "coordinate": "870,280;1220,280",
+          "nextNodeCode": "9",
+          "nowNodeCode": "7",
+          "skipType": "PASS"
+        },
+        {
+          "coordinate": "820,320;820,350;500,350;500,260",
+          "nextNodeCode": "3",
+          "nowNodeCode": "7",
+          "skipType": "REJECT"
+        }
+      ]
+    },
+    {
+      "coordinate": "1240,120|1240,120",
+      "nodeCode": "8",
+      "nodeName": "结束1",
+      "nodeRatio": 0.000,
+      "nodeType": 2,
+      "skipList": [
+      ]
+    },
+    {
+      "coordinate": "1240,280|1240,280",
+      "nodeCode": "9",
+      "nodeName": "结束2",
+      "nodeRatio": 0.000,
+      "nodeType": 2,
+      "skipList": [
+      ]
+    }
+  ]
+}

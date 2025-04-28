@@ -1,0 +1,30 @@
+{
+  "name": "warm-flow-doc",
+  "version": "1.6.6",
+  "description": "国产自研工作流",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "docs:build": "vuepress-vite build src",
+    "docs:clean-dev": "vuepress-vite dev src --clean-cache",
+    "docs:dev": "vuepress-vite dev src",
+    "docs:update-package": "npx vp-update"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "2.0.0-rc.20",
+    "@vuepress/plugin-slimsearch": "2.0.0-rc.81",
+    "sass-embedded": "^1.85.1",
+    "vue": "^3.5.13",
+    "vuepress": "2.0.0-rc.20",
+    "vuepress-theme-hope": "2.0.0-rc.73"
+  },
+  "dependencies": {
+    "axios": "^1.8.1",
+    "element-plus": "^2.9.5",
+    "flowchart.ts": "^3.0.1",
+    "katex": "^0.16.21",
+    "mermaid": "^10.9.3",
+    "vuepress-plugin-md-enhance": "2.0.0-rc.72"
+  },
+  "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
+}

@@ -1,0 +1,209 @@
+{
+  "flowCode": "leaveFlow-serial4",
+  "flowName": "串行-复杂互斥",
+  "formCustom": "N",
+  "formPath": "system/leave/approve",
+  "version": "1",
+  "nodeList": [
+    {
+      "coordinate": "140,260|140,260",
+      "nodeCode": "c4119826-9d6f-4dc3-9fd7-5bf3b006d2cc",
+      "nodeName": "开始",
+      "nodeRatio": 0.000,
+      "nodeType": 0,
+      "skipList": [
+        {
+          "coordinate": "160,260;295,260",
+          "nextNodeCode": "71bccb3e-46a1-4351-9790-54824bccaba9",
+          "nowNodeCode": "c4119826-9d6f-4dc3-9fd7-5bf3b006d2cc",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "320,260",
+      "nodeCode": "71bccb3e-46a1-4351-9790-54824bccaba9",
+      "nodeRatio": 0.000,
+      "nodeType": 3,
+      "skipList": [
+        {
+          "coordinate": "320,285;320,360|320,322",
+          "nextNodeCode": "b37236bf-6a72-4721-b564-31144ce65907",
+          "nowNodeCode": "71bccb3e-46a1-4351-9790-54824bccaba9",
+          "skipCondition": "gt@@flag|1",
+          "skipName": "flag>1",
+          "skipType": "PASS"
+        },
+        {
+          "coordinate": "345,260;540,260;540,360|442,260",
+          "nextNodeCode": "891823e2-f407-4385-9a89-591cbe8fbfec",
+          "nowNodeCode": "71bccb3e-46a1-4351-9790-54824bccaba9",
+          "skipCondition": "le@@flag|1",
+          "skipName": "flag<=1",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "320,400|320,400",
+      "nodeCode": "b37236bf-6a72-4721-b564-31144ce65907",
+      "nodeName": "组长审批",
+      "nodeRatio": 0.000,
+      "nodeType": 1,
+      "permissionFlag": "role:1@@role:3",
+      "skipList": [
+        {
+          "coordinate": "370,400;490,400",
+          "nextNodeCode": "891823e2-f407-4385-9a89-591cbe8fbfec",
+          "nowNodeCode": "b37236bf-6a72-4721-b564-31144ce65907",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "540,400|540,400",
+      "nodeCode": "891823e2-f407-4385-9a89-591cbe8fbfec",
+      "nodeName": "主管审批",
+      "nodeRatio": 0.000,
+      "nodeType": 1,
+      "permissionFlag": "role:1@@role:3",
+      "skipList": [
+        {
+          "coordinate": "590,400;675,400",
+          "nextNodeCode": "f142d25a-920c-46cc-b313-76339d6a830f",
+          "nowNodeCode": "891823e2-f407-4385-9a89-591cbe8fbfec",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "700,400",
+      "nodeCode": "f142d25a-920c-46cc-b313-76339d6a830f",
+      "nodeRatio": 0.000,
+      "nodeType": 3,
+      "skipList": [
+        {
+          "coordinate": "700,375;700,300|700,337",
+          "nextNodeCode": "f462e579-eae4-4689-897e-cfd8371131c8",
+          "nowNodeCode": "f142d25a-920c-46cc-b313-76339d6a830f",
+          "skipCondition": "gt@@flag|2",
+          "skipName": "flag>2",
+          "skipType": "PASS"
+        },
+        {
+          "coordinate": "725,400;840,400|782,400",
+          "nextNodeCode": "35f62e44-63db-4bd4-95ae-46c3d302ef80",
+          "nowNodeCode": "f142d25a-920c-46cc-b313-76339d6a830f",
+          "skipCondition": "le@@flag|2",
+          "skipName": "flag<=2",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "700,260|700,260",
+      "nodeCode": "f462e579-eae4-4689-897e-cfd8371131c8",
+      "nodeName": "经理审批",
+      "nodeRatio": 0.000,
+      "nodeType": 1,
+      "permissionFlag": "role:1@@role:3",
+      "skipList": [
+        {
+          "coordinate": "750,260;835,260",
+          "nextNodeCode": "7f61c3b9-497d-48d7-9bbd-ab54ebabea64",
+          "nowNodeCode": "f462e579-eae4-4689-897e-cfd8371131c8",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "860,260",
+      "nodeCode": "7f61c3b9-497d-48d7-9bbd-ab54ebabea64",
+      "nodeRatio": 0.000,
+      "nodeType": 3,
+      "skipList": [
+        {
+          "coordinate": "885,260;990,260|937,260",
+          "nextNodeCode": "8185658b-1cf7-4303-b6d3-2747c974fb7b",
+          "nowNodeCode": "7f61c3b9-497d-48d7-9bbd-ab54ebabea64",
+          "skipCondition": "gt@@flag|3",
+          "skipName": "flag>3",
+          "skipType": "PASS"
+        },
+        {
+          "coordinate": "860,285;860,380|860,332",
+          "nextNodeCode": "35f62e44-63db-4bd4-95ae-46c3d302ef80",
+          "nowNodeCode": "7f61c3b9-497d-48d7-9bbd-ab54ebabea64",
+          "skipCondition": "le@@flag|3",
+          "skipName": "flag<=3",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "1040,260|1040,260",
+      "nodeCode": "8185658b-1cf7-4303-b6d3-2747c974fb7b",
+      "nodeName": "总经理审批",
+      "nodeRatio": 0.000,
+      "nodeType": 1,
+      "permissionFlag": "role:1@@role:3",
+      "skipList": [
+        {
+          "coordinate": "1090,260;1155,260",
+          "nextNodeCode": "e9a282c1-9888-486f-adbd-4eb8c4877419",
+          "nowNodeCode": "8185658b-1cf7-4303-b6d3-2747c974fb7b",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "1180,260",
+      "nodeCode": "e9a282c1-9888-486f-adbd-4eb8c4877419",
+      "nodeRatio": 0.000,
+      "nodeType": 3,
+      "skipList": [
+        {
+          "coordinate": "1204,260;1310,260|1257,260",
+          "nextNodeCode": "9c0abb64-741b-4fdf-8bdf-77b83803f180",
+          "nowNodeCode": "e9a282c1-9888-486f-adbd-4eb8c4877419",
+          "skipCondition": "gt@@flag|4",
+          "skipName": "flag>4",
+          "skipType": "PASS"
+        },
+        {
+          "coordinate": "1180,285;1180,360;860,360;860,380|1180,322",
+          "nextNodeCode": "35f62e44-63db-4bd4-95ae-46c3d302ef80",
+          "nowNodeCode": "e9a282c1-9888-486f-adbd-4eb8c4877419",
+          "skipCondition": "le@@flag|4",
+          "skipName": "flag<=4",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "1360,260|1360,260",
+      "nodeCode": "9c0abb64-741b-4fdf-8bdf-77b83803f180",
+      "nodeName": "董事长审批",
+      "nodeRatio": 0.000,
+      "nodeType": 1,
+      "permissionFlag": "role:1@@role:3",
+      "skipList": [
+        {
+          "coordinate": "1360,300;1360,400;880,400",
+          "nextNodeCode": "35f62e44-63db-4bd4-95ae-46c3d302ef80",
+          "nowNodeCode": "9c0abb64-741b-4fdf-8bdf-77b83803f180",
+          "skipType": "PASS"
+        }
+      ]
+    },
+    {
+      "coordinate": "860,400|860,400",
+      "nodeCode": "35f62e44-63db-4bd4-95ae-46c3d302ef80",
+      "nodeName": "结束",
+      "nodeRatio": 0.000,
+      "nodeType": 2,
+      "skipList": [
+      ]
+    }
+  ]
+}
